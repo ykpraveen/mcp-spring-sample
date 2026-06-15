@@ -1,0 +1,25 @@
+# Build outputs
+target/
+out/
+build/
+
+# Local planning/notes
+PLAN.md
+
+# IDE/editor
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+.env
+
+# OS files
+.DS_Store
+Thumbs.db

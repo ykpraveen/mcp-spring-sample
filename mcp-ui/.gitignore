@@ -1,0 +1,13 @@
+# Build output
+dist/
+node_modules/
+.DS_Store
+*.local
+*.env
+*.env.local
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo

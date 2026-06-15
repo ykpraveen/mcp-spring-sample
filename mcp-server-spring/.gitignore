@@ -1,0 +1,30 @@
+# Build outputs
+target/
+out/
+build/
+
+# Maven local/project config
+.mvn/
+maven-settings.xml
+maven-central-settings.xml
+
+# Local planning/notes
+PLAN.md
+
+# IDE/editor
+.idea/
+.vscode/
+*.iml
+*.ipr
+*.iws
+
+# Logs and temp files
+*.log
+*.tmp
+*.swp
+*.swo
+.env
+
+# OS files
+.DS_Store
+Thumbs.db

@@ -1,0 +1,45 @@
+server:
+  port: 7170
+
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  application:
+    name: mcp-server-spring
+  main:
+    banner-mode: off
+    log-startup-info: false
+  ai:
+    mcp:
+      server:
+        name: spring-sample-mcp-server
+        version: 1.0.0
+        protocol: STREAMABLE
+        type: SYNC
+        annotation-scanner:
+          enabled: true
+
+mcp:
+  security:
+    api-key: ${MCP_API_KEY:}
+
+weather:
+  brightsky:
+    api-url: https://api.brightsky.dev/current_weather
+  cache:
+    enabled: true
+    ttl: 10m
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics
+  endpoint:
+    health:
+      show-details: always
+
+logging:  
+  level:
+    root: INFO
+    com.dev.mcp.server.weather: INFO

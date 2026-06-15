@@ -1,0 +1,47 @@
+server:
+  port: 7171
+
+spring:
+  config:
+    import: optional:file:.env[.properties]
+  application:
+    name: mcp-spring-agent
+  ai:
+    model:
+      chat: google-genai
+    google:
+      genai:
+        api-key: ${GEMINI_API_KEY:}
+        chat:
+          model: gemini-3.5-flash
+          thinking-level: MINIMAL
+    mcp:
+      client:
+        type: SYNC
+        initialized: false
+        request-timeout: 10s
+        toolcallback:
+          enabled: true
+        streamable-http:
+          connections:
+            weather-server:
+              url: http://localhost:7170/mcp
+
+agent:
+  memory-max-turns: 20
+  memory-max-sessions: 500
+  gemini-timeout: 3m
+  mcp-api-key: ${MCP_API_KEY:}
+
+management:
+  endpoints:
+    web:
+      exposure:
+        include: health,metrics
+
+logging:
+  level:
+    root: INFO
+    com.dev.mcp.agent: DEBUG
+    io.modelcontextprotocol.client: WARN
+    org.springframework.ai.google.genai: DEBUG
