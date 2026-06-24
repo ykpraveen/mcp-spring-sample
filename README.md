@@ -2,6 +2,8 @@
 
 A complete AI chat application with Spring Boot backend and React frontend, powered by Spring AI and Model Context Protocol (MCP).
 
+Published article: [Building an AI Chat Agent with MCP, Spring AI](https://dev.to/ykpraveen/building-an-ai-chat-agent-with-mcp-spring-ai-f0n)
+
 ```
 ┌──────────────────────────┐
 │   mcp-ui (React, 3000)   │  ← Chat UI
